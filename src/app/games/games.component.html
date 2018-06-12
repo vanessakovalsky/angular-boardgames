@@ -1,7 +1,6 @@
   Game details:
   <ul>
     <li *ngFor="let game of games">
-      {{ game.name }}
+      <app-game-detail [game]=game></app-game-detail>
     </li>
   </ul>
-  <app-game-detail></app-game-detail>

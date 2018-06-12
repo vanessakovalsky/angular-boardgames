@@ -1,8 +1,38 @@
 <h2>{{ game.name }}</h2>
 <div>
+<div>
   <label>name:
     <input [(ngModel)]="game.name" placeholder="name">
   </label>
-  {{ game.editor}}
-  {{ game.time }}
+</div>
+  <div>
+    <label>editor:
+      <input [(ngModel)]="game.editor" placeholder="editor">
+    </label>
+  </div>
+  <div>
+    <label>Year published:
+      <input [(ngModel)]="game.year_published" placeholder="year published">
+    </label>
+  </div>
+  <div>
+    <label>Description:
+      <input [(ngModel)]="game.description" placeholder="description">
+    </label>
+  </div>
+  <div>
+    <label>Category:
+      <input [(ngModel)]="game.category" placeholder="Category">
+    </label>
+  </div>
+  <div>
+    <label>Time:
+      <input [(ngModel)]="game.time" placeholder="time">
+    </label>
+  </div>
+  <div>
+    <label>Number of players:
+      <input [(ngModel)]="game.number_player" placeholder="Number of players">
+    </label>
+  </div>
 </div>
