@@ -1,4 +1,6 @@
-export const GAMES = [
+import { Game } from './game';
+
+export const GAMES : Game[] =[
     {
         name : 'Monopoly',
         editor : 'Hasbro',
