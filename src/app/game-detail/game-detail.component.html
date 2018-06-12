@@ -1,5 +1,8 @@
 <h2>{{ game.name }}</h2>
 <div>
+  <label>name:
+    <input [(ngModel)]="game.name" placeholder="name">
+  </label>
   {{ game.editor}}
   {{ game.time }}
 </div>
