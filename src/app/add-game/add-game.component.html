@@ -1,15 +1,18 @@
 <input type="submit" name="show" value="Add new game" (click)="showAdd()" />
 
 <div *ngIf="showForm">
-  <label>Game name</label>
-  <input id="name" name="name" class="form-control" required />
-  <label>Editor</label>
-  <input name="editor" minlength="6" />
-  <label>Editor</label>
-  <input type="submit" name="subitGame"/>
-  <div *ngIf="name.invalid">
-    <div *ngIf="name.errors.required">
+    <form #name="ngForm">
+    <label>Game name</label>
+    <input [(ngModel)]="model.name" #name='ngModel' name="name" class="form-control" required />
+    <label>Editor</label>
+    <input [(ngModel)]="model.editor" #editor='ngModel' name="editor" minlength="6" />
+    <label>Editor</label>
+    <input type="submit" name="subitGame"/>
+  </form>
+    <div *ngIf="name.errors">
       Game Name is a mandatory field.
     </div>
-  </div>
+    <div *ngIf="editor.errors">
+       Editor must be at least 6 caracters.
+      </div>
 </div>
