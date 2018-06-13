@@ -1,7 +1,7 @@
 <input type="submit" name="show" value="Add new game" (click)="showAdd()" />
 
 <div *ngIf="showForm">
-    <form #name="ngForm">
+    <form #name="ngForm" appTextColor >
     <label>Game name</label>
     <input [(ngModel)]="model.name" #name='ngModel' name="name" class="form-control" required />
     <label>Editor</label>

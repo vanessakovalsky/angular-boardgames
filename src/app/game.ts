@@ -6,4 +6,6 @@ export class Game {
     category: string;
     time: string;
     number_player: string;
+
+    construct() {}
 }

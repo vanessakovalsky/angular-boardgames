@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { GamesComponent } from './games/games.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { AddGameComponent } from './add-game/add-game.component';
+import { TextColorDirective } from './text-color.directive';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamesComponent,
     GameDetailComponent,
-    AddGameComponent
+    AddGameComponent,
+    TextColorDirective
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
