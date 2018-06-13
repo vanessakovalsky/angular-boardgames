@@ -7,7 +7,7 @@ import { GAMES } from './mock-game';
 })
 export class GameDataService {
 
-  constructor() { }
+  constructor(private GameService: GameDataService) { }
 
   getGames(): Game[] {
     return GAMES;
