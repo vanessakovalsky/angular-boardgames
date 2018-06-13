@@ -7,5 +7,4 @@ export class Game {
     time: string;
     number_player: string;
 
-    construct() {}
 }

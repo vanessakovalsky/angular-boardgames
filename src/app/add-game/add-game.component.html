@@ -7,7 +7,7 @@
     <label>Editor</label>
     <input [(ngModel)]="model.editor" #editor='ngModel' name="editor" minlength="6" />
     <label>Editor</label>
-    <input type="submit" name="subitGame"/>
+    <input type="submit" name="subitGame" (click)="addGame(model)"/>
   </form>
     <div *ngIf="name.errors">
       Game Name is a mandatory field.

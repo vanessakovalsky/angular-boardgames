@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../game';
+import { GameDataService } from '../game-data.service';
+
 
 @Component({
   selector: 'app-add-game',
@@ -10,7 +12,7 @@ export class AddGameComponent implements OnInit {
   model: Game = new Game();
   showForm = false;
 
-  constructor() { }
+  constructor(private gameService: GameDataService) { }
 
   showAdd(){
     if(this.showForm){
@@ -19,6 +21,11 @@ export class AddGameComponent implements OnInit {
     else {
       this.showForm = true;
     }
+  }
+
+  addGame(game: Game){
+    this.games = this.gameService.addGame()
+    .subscribe(games => this.games = games;
   }
 
   ngOnInit() {
